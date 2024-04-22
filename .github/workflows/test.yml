@@ -3,8 +3,17 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
+    - name: 读取仓库内容
     - uses: actions/checkout@v4
+
+    - name: 打印工作路径
     - run: pwd
+
+    - name: 列出工作路径下的文件
     - run: ls
+
+    - name: 编译
     - run: gcc main.c -o main
+
+    - name: 运行
     - run: ./main
