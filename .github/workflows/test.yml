@@ -1,11 +1,10 @@
 on: push
 jobs:
   job1:
-    runs-on: ubantu-latest
+    runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v4
     - run: pwd
     - run: ls
-  job2:
-    runs-on: windows-latest
-    steps:
-    - run: python --version
+    - run: gcc main.c -o main
+    - run: ./main
