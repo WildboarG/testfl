@@ -1,12 +1,11 @@
 on: push
-
 jobs:
   job1:
-  run-on: ubantu-latest
+    run-on: ubantu-latest
     steps:
     - run: pwd
     - run: ls
   job2:
-  run-on: arch-latest
+    run-on: arch-latest
     steps:
     - run: python --version
